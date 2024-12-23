@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  background: url("https://images.pond5.com/planet-cartoon-space-animation-background-footage-090106999_prevstill.jpeg")
+    no-repeat fixed center;
+  background-size: cover;
+}
+
+img {
+  width: 150px;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: fly 5s infinite ease-in;
+}
+
+@keyframes fly {
+  0% {
+    transform: rotate(0deg);
+  }
+  5% {
+    transform: rotate(-45deg);
+  }
+
+  50% {
+    transform: translate(-100%, -50%) rotate(-45deg);
+  }
+
+  55% {
+    transform: translate(-100%, -50%) rotate(45deg);
+  }
+
+  100% {
+    transform: translate(100%, -100%) rotate(45deg);
+  }
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  color: white;
+  padding-top: 5rem;
+  padding-bottom: 4rem;
+}
+.main-content p {
+  font-size: 1.3rem;
+  text-align: center;
+  padding-left: 9rem;
+  padding-right: 9rem;
+}
+
+.main-content h1 {
+  text-align: center;
+  padding-left: 9rem;
+  padding-right: 9rem;
+}
+
+.main-input {
+  margin-top: 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-input input {
+  border: 2px solid red;
+}
+
+.file-input {
+  display: none; /* Hides the default file input */
+}
+
+.custom-file-label {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.custom-file-label:hover {
+  background-color: #0056b3;
+}
+
+.file-name {
+  padding-top: 0.5rem;
+  font-size: 14px;
+  color: #0b4782;
+}
+
+.submit-file {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.submit-file:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.submit-file:active {
+  background-color: #1e7e34;
+  transform: translateY(0);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
