@@ -60,6 +60,12 @@ Please send the response in the form of json `;
 
   const submitFile = async () => {
     if (actualfile) {
+      if (!process.env.NEXT_PUBLIC_museyardkey) {
+        alert(
+          "please generate the gemini ai api keys first to analyse the chat patterns"
+        );
+        return;
+      }
       const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
       const result = await model.generateContent(prompt);
       let responseText = result.response.text();
