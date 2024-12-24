@@ -19,10 +19,8 @@ export default function RootLayout({
         />
       </head>
       <body style={{ fontFamily: "'Belanosima', sans-serif" }}>
-        <StoreProvider>
-        {children}
-        </StoreProvider>
-        </body>
+        <StoreProvider>{children}</StoreProvider>
+      </body>
     </html>
   );
 }
